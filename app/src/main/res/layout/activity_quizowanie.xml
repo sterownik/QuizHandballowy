@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quizowanie" >
+
+    <TextView
+        android:id="@+id/pytanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="TextView" />
+
+    <CheckBox
+        android:id="@+id/pierwszy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pytanie"
+        android:textSize="23dp"
+        android:layout_marginTop="90dp"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/drugi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@id/pierwszy"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/trzeci"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="23dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drugi"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/czwarty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="23dp"
+        android:layout_below="@id/trzeci"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/piaty"
+        android:layout_below="@id/czwarty"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="23dp"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/szosty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="23dp"
+        android:layout_below="@id/piaty"
+        android:text="CheckBox" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/szosty"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:drawable/ic_media_ff" />
+
+
+</RelativeLayout>
