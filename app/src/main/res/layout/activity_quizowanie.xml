@@ -10,7 +10,7 @@
         android:id="@+id/pytanie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="10dp"
         android:text="TextView" />
 
     <CheckBox
@@ -20,6 +20,7 @@
         android:layout_below="@id/pytanie"
         android:textSize="23dp"
         android:layout_marginTop="90dp"
+        android:onClick="jedynka"
         android:text="CheckBox" />
 
     <CheckBox
@@ -29,6 +30,7 @@
         android:textSize="23dp"
         android:layout_marginTop="17dp"
         android:layout_below="@id/pierwszy"
+        android:onClick="dwojka"
         android:text="CheckBox" />
 
     <CheckBox
@@ -38,6 +40,7 @@
         android:textSize="23dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/drugi"
+        android:onClick="trojka"
         android:text="CheckBox" />
 
     <CheckBox
@@ -47,6 +50,7 @@
         android:layout_marginTop="17dp"
         android:textSize="23dp"
         android:layout_below="@id/trzeci"
+        android:onClick="czworka"
         android:text="CheckBox" />
 
     <CheckBox
@@ -56,6 +60,7 @@
         android:layout_marginTop="17dp"
         android:textSize="23dp"
         android:layout_height="wrap_content"
+        android:onClick="piatka"
         android:text="CheckBox" />
 
     <CheckBox
@@ -65,6 +70,7 @@
         android:layout_marginTop="17dp"
         android:textSize="23dp"
         android:layout_below="@id/piaty"
+        android:onClick="szostka"
         android:text="CheckBox" />
 
     <ImageButton

@@ -2,23 +2,24 @@
 a) 40 x 20 m& 
 b) 42 x 20 m&
 c) 38 x 18 m& 
-d) dlugosc pomiedzy 38 i 42 m, szerokosc pomiedzy 18 i 22 m&#
-
-2. Ile wynosza wymagane przez przepisy wymiary w swietle bramki? 
-a) 1.92 x 2.92 m, 
-b) 2.00 x 3.00 m, 
-c) 2.05 x 3.05 m, 
-d) 2.08 x 3.08 m. 
-3. Podczas wykonywania rzutu od bramki, bramkarz A dotyka linii pola bramkowego stopa jednej nogi. Jaka powinna byc decyzja sedziego? 
-a) powtorzyc rzut od bramki na sygnal gwizdka sedziego, 
-b) rzut wolny dla druzyny B, 
-c) grac dalej. 
-4. Pilka lezy na linii pola bramkowego. Atakujacy zawodnik A7 podnosi pilke i stara sie zdobyc bramke. W momencie, gdy znajduje sie on w sytuacji pewnej do zdobycia bramki, zostaje zaatakowany w sposob niezgodny z przepisami gry. Jaka powinna byc decyzja sedziego?
-a) rzut wolny dla druzyny B, 
-b) rzut wolny dla druzyny A, 
-c) rzut karny dla druzyny A, 
-d) rzut od bramki dla druzyny B.
-5. Po sygnale gwizdka sedziego na wykonanie rzutu karnego, bramkarz druzyny A staje stopa jednej nogi na linii 4 m, nie przekraczajac tej linii. Rzucona pilka zmierza ponad poprzeczke. Jaka powinna byc decyzja sedziego?
-a) powtorzyc rzut karny po sygnale gwizdka, 
-b) poniewaz nie padla bramka, wznowienie gry rzutem od bramki, 
-c) pozycja bramkarza jest wlasciwa - brak reakcji.
+d) dlugosc pomiedzy 38 i 42 m, szerokosc pomiedzy 18 i 22 m#
+2. Ile wynosza wymagane przez przepisy wymiary w swietle bramki?&
+a) 1.92 x 2.92 m,&
+b) 2.00 x 3.00 m,& 
+c) 2.05 x 3.05 m,&
+d) 2.08 x 3.08 m.#
+3. Podczas wykonywania rzutu od bramki, bramkarz A dotyka linii pola bramkowego stopa jednej nogi. Jaka powinna byc decyzja sedziego?&
+a) powtorzyc rzut od bramki na sygnal gwizdka sedziego,&
+b) rzut wolny dla druzyny B,&
+c) grac dalej.&
+d) asas#
+4. Pilka lezy na linii pola bramkowego. Atakujacy zawodnik A7 podnosi pilke i stara sie zdobyc bramke. W momencie, gdy znajduje sie on w sytuacji pewnej do zdobycia bramki, zostaje zaatakowany w sposob niezgodny z przepisami gry. Jaka powinna byc decyzja sedziego?&
+a) rzut wolny dla druzyny B,&
+b) rzut wolny dla druzyny A,&
+c) rzut karny dla druzyny A,&
+d) rzut od bramki dla druzyny B.#
+5. Po sygnale gwizdka sedziego na wykonanie rzutu karnego, bramkarz druzyny A staje stopa jednej nogi na linii 4 m, nie przekraczajac tej linii. Rzucona pilka zmierza ponad poprzeczke. Jaka powinna byc decyzja sedziego?&
+a) powtorzyc rzut karny po sygnale gwizdka,&
+b) poniewaz nie padla bramka, wznowienie gry rzutem od bramki,&
+c) pozycja bramkarza jest wlasciwa - brak reakcji.&
+d) asas&
