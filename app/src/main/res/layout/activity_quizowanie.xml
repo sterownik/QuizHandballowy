@@ -10,7 +10,7 @@
         android:id="@+id/pytanie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10dp"
+        android:textSize="20dp"
         android:text="TextView" />
 
     <CheckBox
@@ -18,69 +18,113 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/pytanie"
-        android:textSize="23dp"
-        android:layout_marginTop="90dp"
-        android:onClick="jedynka"
+        android:textSize="15dp"
+        android:layout_marginTop="0dp"
+
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/drugi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="23dp"
-        android:layout_marginTop="17dp"
+        android:textSize="15dp"
+        android:layout_marginTop="0dp"
         android:layout_below="@id/pierwszy"
-        android:onClick="dwojka"
+
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/trzeci"
         android:layout_width="wrap_content"
-        android:layout_marginTop="17dp"
-        android:textSize="23dp"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/drugi"
-        android:onClick="trojka"
+
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/czwarty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:textSize="23dp"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
         android:layout_below="@id/trzeci"
-        android:onClick="czworka"
+
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/piaty"
         android:layout_below="@id/czwarty"
         android:layout_width="wrap_content"
-        android:layout_marginTop="17dp"
-        android:textSize="23dp"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
         android:layout_height="wrap_content"
-        android:onClick="piatka"
+
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/szosty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:textSize="23dp"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
         android:layout_below="@id/piaty"
-        android:onClick="szostka"
         android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/siodmy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
+        android:layout_below="@id/szosty"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/osmy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
+        android:layout_below="@id/siodmy"
+        android:text="CheckBox" />
+    <CheckBox
+        android:id="@+id/dziewiaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textSize="15dp"
+        android:layout_below="@id/osmy"
+        android:text="CheckBox" />
+
+
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@id/szosty"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/dziewiaty"
+        android:layout_marginTop="0dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@android:drawable/ic_media_ff" />
+
+    <TextView
+        android:id="@+id/wynik"
+        android:layout_below="@id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+
+
+
+
+
+
+
+
 
 
 </RelativeLayout>
