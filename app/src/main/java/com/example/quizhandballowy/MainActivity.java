@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button start = (Button)findViewById(R.id.start);
+        final Button teach = (Button)findViewById(R.id.teach);
         Button koniec = (Button)findViewById(R.id.end);
+
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        teach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),teach.class);
+                startActivity(intent);
+            }
+        });
+
+
         koniec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

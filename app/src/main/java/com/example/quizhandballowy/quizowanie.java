@@ -25,8 +25,8 @@ import java.util.Scanner;
 public class quizowanie extends AppCompatActivity {
 
     ArrayList<String> lista = new ArrayList<String>();
-    String odp1 = "x";
-    String tmp="x";
+
+    String tmp2 = " ";
     int ilosc = 0;
     int dobre = 0;
     int j = 0;
@@ -65,132 +65,7 @@ public class quizowanie extends AppCompatActivity {
         final TextView wyniczek = (TextView)findViewById(R.id.wynik);
 
 
-        jedynka.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"a";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('a','x');
-                }
-            }
-        });
-        dwojka.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"b";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('b','x');
-                }
-            }
-        });
-        trojka.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"c";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('c','x');
-                }
-            }
-        });
-        czwarty.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"d";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('d','x');
-                }
-            }
-        });
-        piaty.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"e";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('e','x');
-                }
-            }
-        });
-        szosty.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"f";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('f','x');
-                }
-            }
-        });
-        siodmy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"g";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('g','x');
-                }
-            }
-        });
-        osmy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"h";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('h','x');
-                }
-            }
-        });
-        dziewiaty.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    odp1=odp1+"i";
-                    tmp=odp1;
-                }
-                else if(!isChecked)
-                {
-                    tmp = odp1.replace('i','x');
-                }
-            }
-        });
+
 
 
         String str = "";
@@ -352,33 +227,71 @@ public class quizowanie extends AppCompatActivity {
                 dziewiaty.setText(str2[9]);
             }
 
+
             wyniczek.setText("Ilosc odpowiedzi dobrych : "+Integer.toString(dobre)+"\n"+"Ilosc udzielonych odpowiedzi : "+Integer.toString(ilosc));
 
              butonik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ilosc++;
-                if(jedynka.isChecked())j++;
-                if(dwojka.isChecked())j++;
-                if(trojka.isChecked())j++;
-                if(czwarty.isChecked())j++;
-                if(piaty.isChecked())j++;
-                if(szosty.isChecked())j++;
-                if(siodmy.isChecked())j++;
-                if(osmy.isChecked())j++;
-                if(dziewiaty.isChecked())j++;
+                if(jedynka.isChecked())
+                {
+                    tmp2=tmp2+"a";
+                    j++;
+                }
+                if(dwojka.isChecked())
+                {
+                    tmp2=tmp2+"b";
+                    j++;
+                }
+
+                if(trojka.isChecked())
+                {
+                    tmp2=tmp2+"c";
+                    j++;
+                }
+
+                if(czwarty.isChecked())
+                {
+                    tmp2=tmp2+"d";
+                    j++;
+                }
+
+                if(piaty.isChecked()){
+                    tmp2=tmp2+"e";
+                    j++;
+                }
+                if(szosty.isChecked()){
+                    tmp2=tmp2+"f";
+                    j++;
+                }
+                if(siodmy.isChecked()){
+                    tmp2=tmp2+"g";
+                    j++;
+                }
+                if(osmy.isChecked())
+                {
+                    tmp2=tmp2+"h";
+                    j++;
+                }
+                if(dziewiaty.isChecked())
+                {
+                    tmp2=tmp2+"i";
+                    j++;
+                }
 
             for(int i=0;i<odppytanie.length;i++) {
                 if (random == i) {
-                    if (tmp.contains(odppytanie[i]) && j==odppytanie[i].length()) {
+                    if (tmp2.contains(odppytanie[i]) && j==odppytanie[i].length()) {
                        Toast.makeText(getApplicationContext(), "Zdobywasz punkt", Toast.LENGTH_LONG).show();
                        dobre++;
                     }
+
                 }
 
             }
-            odp1 = "x";
-            tmp="x";
+
+            tmp2=" ";
             j=0;
                 jedynka.setChecked(false);
                 dwojka.setChecked(false);
