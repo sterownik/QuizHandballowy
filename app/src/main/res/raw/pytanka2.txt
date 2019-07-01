@@ -392,8 +392,7 @@ a) Rzut wolny dla druzyny CZARNYCH&
 b) Rzut wolny dla druzyny BIALYCH&
 c) Wykluczenie dla BIALY 3 i druzyna BIALYCH jest dodatkowo pomniejszona o jednego zawodnika na boisku przez 30 sek.&
 d) 30 sekund kary dla BIALY 3 i druzyna BIALYCH musi miec zredukowana o jednego gracza na 2 minuty&
-e) Dyskwalifikacja dla BIALY 3 (czerwona kartka) i druzyna BIALYCH musi byc zredukowana o jednego gracza na&#
-30 sekund&
+e) Dyskwalifikacja dla BIALY 3 (czerwona kartka) i druzyna BIALYCH musi byc zredukowana o jednego gracza na 30 sekund&#
 4.24 BIALY 5 zostal wykluczony. Po 1 minucie i 45 sekundach wykluczenia, kierownik druzyny BIALYCH wysyla go na boisko. Prawidlowa decyzja?&
 a) Kolejne 2-minutowe wykluczenie zawodnika BIALY 5, oraz druzyna BIALYCH zostaje zredukowana o jednego zawodnika na boisku przez 2 minuty i 15 sekund&
 b) Dyskwalifikacja dla zawodnika BIALY 5 (czerwona kartka) oraz druzyna BIALYCH zostaje zredukowana o dwoch zawodnikow na boisku przez 15 sekund i o jednego zawodnika na boisku przez 1 minute i 45 sekund&
@@ -1926,4 +1925,4 @@ a) Natychmiast&
 b) Podczas nastepnej przerwy w grze&#
 18.8 Jezeli delegat na zawody przerwie gre z powodu naruszenia spowodowanego przez druzyne BIALYCH, to czy po wznowieniu gry pilka jest w posiadaniu CZARNYCH?&
 a) Tak&
-b) Nie&
+b) Nie&#

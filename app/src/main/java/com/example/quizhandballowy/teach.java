@@ -1,12 +1,16 @@
 package com.example.quizhandballowy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,11 +18,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class teach extends AppCompatActivity {
-
+    RelativeLayout simple1;
     ArrayList<String> lista = new ArrayList<String>();
 
     String tmp2 = " ";
@@ -41,12 +46,13 @@ public class teach extends AppCompatActivity {
 
 
 
+    @SuppressLint("ResourceType")
     public void Play() throws IOException
     {
         final ArrayList<Integer> lista = new ArrayList<Integer>();
 
 
-        ImageButton butonik = (ImageButton)findViewById(R.id.imageButton);
+
 
         final CheckBox jedynka=(CheckBox)findViewById(R.id.pierwszy);
         final CheckBox dwojka=(CheckBox)findViewById(R.id.drugi);
@@ -59,21 +65,53 @@ public class teach extends AppCompatActivity {
         final CheckBox dziewiaty = (CheckBox)findViewById(R.id.dziewiaty);
         final TextView pt = (TextView)findViewById(R.id.pytanie);
         final TextView wyniczek = (TextView)findViewById(R.id.wynik);
-        final ImageButton wstecz = (ImageButton)findViewById(R.id.back);
-        final Button sprawdz = (Button)findViewById(R.id.check);
 
 
 
+       simple1 = (RelativeLayout)findViewById(R.id.teach);
+
+        RelativeLayout.LayoutParams buttonParam = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams buttonParam2 = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams buttonParam3 = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        final Button next = new Button(this);  // create a new Button
+
+        //next.setImageResource(R.drawable.next); // set Text in the Button
+        next.setTextColor(Color.BLACK);
+        next.setBackgroundColor(Color.GREEN);
+        next.setText("Nastepne pytanie");
+        next.setLayoutParams(buttonParam); // set defined layout params to Button
+
+        final Button back = new Button(this);  // create a new Button
+        back.setTextColor(Color.BLACK);
+        back.setBackgroundColor(Color.GREEN);
+
+       // back.setImageResource(R.drawable.back); // set Text in the Button
+        back.setText("Poprzednie pytanie");
+        back.setLayoutParams(buttonParam3); // set defined layout params to Button
 
 
+
+        final Button myButton = new Button(this);  // create a new Button
+        myButton.setText("Sprawdz"); // set Text in the Button
+        myButton.setId(3);
+        myButton.setLayoutParams(buttonParam2); // set defined layout params to Button
+        myButton.setTextColor(Color.BLACK); // set white color for the text of Button
+        myButton.setBackgroundColor(Color.GREEN);
+
+
+
+        Charset ch = Charset.forName("windows-1250");
         String str = "";
         String odp = "";
         StringBuffer buf1 = new StringBuffer();
         StringBuffer buf = new StringBuffer();
-        InputStream is = this.getResources().openRawResource(R.raw.pytanka2);
+        InputStream is = this.getResources().openRawResource(R.raw.polskie);
         InputStream is2 = this.getResources().openRawResource(R.raw.moje);
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2));
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2,ch));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is,ch));
         if(is!=null)
         {
             while (( str = reader.readLine()) != null)
@@ -123,6 +161,9 @@ public class teach extends AppCompatActivity {
             siodmy.setVisibility(View.INVISIBLE);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.drugi);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.drugi);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.drugi);
         }
         if (str2.length==4)
         {
@@ -134,6 +175,9 @@ public class teach extends AppCompatActivity {
             siodmy.setVisibility(View.INVISIBLE);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.trzeci);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.trzeci);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.trzeci);
         }
         if(str2.length==5)
         {
@@ -146,6 +190,9 @@ public class teach extends AppCompatActivity {
             siodmy.setVisibility(View.INVISIBLE);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.czwarty);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.czwarty);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.czwarty);
         }
         if (str2.length==6)
         {
@@ -159,6 +206,9 @@ public class teach extends AppCompatActivity {
             siodmy.setVisibility(View.INVISIBLE);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.piaty);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.piaty);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.piaty);
         }
         if(str2.length==7)
         {
@@ -173,6 +223,9 @@ public class teach extends AppCompatActivity {
             siodmy.setVisibility(View.INVISIBLE);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.szosty);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.szosty);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.szosty);
         }
         if(str2.length==8)
         {
@@ -188,6 +241,9 @@ public class teach extends AppCompatActivity {
             siodmy.setText(str2[7]);
             osmy.setVisibility(View.INVISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.siodmy);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.siodmy);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.siodmy);
         }
         if(str2.length==9)
         {
@@ -204,6 +260,9 @@ public class teach extends AppCompatActivity {
             osmy.setText(str2[8]);
             osmy.setVisibility(View.VISIBLE);
             dziewiaty.setVisibility(View.INVISIBLE);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.osmy);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.osmy);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.osmy);
         }
         if(str2.length==10)
         {
@@ -221,14 +280,43 @@ public class teach extends AppCompatActivity {
             osmy.setVisibility(View.VISIBLE);
             dziewiaty.setVisibility(View.VISIBLE);
             dziewiaty.setText(str2[9]);
+            buttonParam.addRule(RelativeLayout.BELOW,R.id.dziewiaty);
+            buttonParam2.addRule(RelativeLayout.BELOW,R.id.dziewiaty);
+            buttonParam3.addRule(RelativeLayout.BELOW,R.id.dziewiaty);
         }
 
+        buttonParam2.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        buttonParam.addRule(RelativeLayout.RIGHT_OF,3);
+        buttonParam3.setMargins(0,0,30,0);
+        buttonParam3.addRule(RelativeLayout.LEFT_OF,3);
+        buttonParam.setMargins(30,0,0,0);
 
-        wyniczek.setText("Numer pytania to : "+ Integer.toString(liczba));
+        simple1.addView(myButton);
+        simple1.addView(next);
+        simple1.addView(back);
+        myButton.setVisibility(View.VISIBLE);
+        next.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+
+        RelativeLayout.LayoutParams txt1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT  );
+
+        final TextView txt = new TextView(this);
+        txt.setText("Numer pytania to : "+ Integer.toString(liczba));
+
+        txt.setLayoutParams(txt1);
+        txt1.addRule(RelativeLayout.BELOW,3);
+
+        txt1.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        simple1.addView(txt);
+        txt.setVisibility(View.VISIBLE);
+
+
+      //  wyniczek.setText("Numer pytania to : "+ Integer.toString(liczba));
 
 
 
-        sprawdz.setOnClickListener(new View.OnClickListener() {
+        myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -279,6 +367,7 @@ public class teach extends AppCompatActivity {
                     j++;
                 }
 
+
                 for(int i=0;i<odppytanie.length;i++) {
                     if (liczba == i) {
                         if (tmp2.contains(odppytanie[i]) && j==odppytanie[i].length()) {
@@ -297,11 +386,11 @@ public class teach extends AppCompatActivity {
                     odpowiedz=odppytanie[liczba].toCharArray();
                     que=que+odpowiedz[i]+ " ";
                 }
-                wyniczek.setText("Poprawne odpowiedzi to : " + que.toUpperCase());
+                txt.setText("Poprawne odpowiedzi to : " + que.toUpperCase());
 
             }
         });
-        wstecz.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(liczba==0)
@@ -323,6 +412,10 @@ public class teach extends AppCompatActivity {
                 siodmy.setChecked(false);
                 osmy.setChecked(false);
                 dziewiaty.setChecked(false);
+                myButton.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.INVISIBLE);
+                back.setVisibility(View.INVISIBLE);
+                txt.setVisibility(View.INVISIBLE);
                 try {
                     Play();
                 }catch (IOException e)
@@ -337,12 +430,12 @@ public class teach extends AppCompatActivity {
 
 
 
-        butonik.setOnClickListener(new View.OnClickListener() {
+       next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(liczba==378)
+                if(liczba==367)
                 {
-                    liczba=378;
+                    liczba=367;
                 }
                 else {
                     liczba++;
@@ -359,6 +452,10 @@ public class teach extends AppCompatActivity {
                 siodmy.setChecked(false);
                 osmy.setChecked(false);
                 dziewiaty.setChecked(false);
+                myButton.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.INVISIBLE);
+                back.setVisibility(View.INVISIBLE);
+                txt.setVisibility(View.INVISIBLE);
                 try {
                     Play();
                 }catch (IOException e)

@@ -13,6 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:id="@+id/teach"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -111,43 +112,7 @@
         android:text="CheckBox" />
 
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                style="@style/Widget.Design.AppBarLayout"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_below="@id/dziewiaty"
-                android:layout_marginTop="0dp"
-                android:layout_toRightOf="@id/check"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@android:drawable/ic_media_ff" />
 
-    <TextView
-        android:id="@+id/wynik"
-        android:layout_below="@id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-            <Button
-                android:id="@+id/check"
-                style="@style/Widget.Design.AppBarLayout"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_below="@id/dziewiaty"
-                android:layout_centerHorizontal="true"
-                android:text="@string/check" />
-
-            <ImageButton
-                android:id="@+id/back"
-                style="@style/Widget.Design.AppBarLayout"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_below="@id/dziewiaty"
-                android:layout_marginRight="20dp"
-                android:layout_toLeftOf="@id/check"
-                app:srcCompat="@android:drawable/ic_media_rew" />
         </RelativeLayout>
     </ScrollView>
 

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quizowanie" >
-
+    tools:context=".teach">
 
 
     <ScrollView
@@ -14,32 +13,34 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:id="@+id/rel"
             android:layout_height="match_parent"
+            android:id="@+id/teach"
             android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/pytanie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="TextView" />
 
-    <CheckBox
-        android:id="@+id/pierwszy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pytanie"
-        android:textSize="15dp"
-        android:layout_marginTop="0dp"
+            <TextView
+                android:id="@+id/pytanie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30dp" />
 
-        android:text="CheckBox" />
+            <CheckBox
+                android:id="@+id/pierwszy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pytanie"
+                android:layout_marginTop="0dp"
+                android:checked="false"
+                android:text="CheckBox"
+                android:textSize="23dp" />
 
     <CheckBox
         android:id="@+id/drugi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_marginTop="0dp"
         android:layout_below="@id/pierwszy"
 
@@ -49,7 +50,7 @@
         android:id="@+id/trzeci"
         android:layout_width="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/drugi"
 
@@ -60,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_below="@id/trzeci"
 
         android:text="CheckBox" />
@@ -70,7 +71,7 @@
         android:layout_below="@id/czwarty"
         android:layout_width="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_height="wrap_content"
 
         android:text="CheckBox" />
@@ -80,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_below="@id/piaty"
         android:text="CheckBox" />
 
@@ -89,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_below="@id/szosty"
         android:text="CheckBox" />
 
@@ -98,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_below="@id/siodmy"
         android:text="CheckBox" />
     <CheckBox
@@ -106,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:textSize="15dp"
+        android:textSize="23dp"
         android:layout_below="@id/osmy"
         android:text="CheckBox" />
 
@@ -114,18 +115,8 @@
 
 
 
-
         </RelativeLayout>
     </ScrollView>
-
-
-
-
-
-
-
-
-
 
 
 </RelativeLayout>

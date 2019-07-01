@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/quizhandballowy/pytania.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/quizhandballowy/quizowanie.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/quizhandballowy/teach.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/raw/polskie.txt" charset="windows-1250" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

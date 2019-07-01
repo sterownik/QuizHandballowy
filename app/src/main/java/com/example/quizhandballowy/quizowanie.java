@@ -1,14 +1,19 @@
 package com.example.quizhandballowy;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,12 +23,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class quizowanie extends AppCompatActivity {
-
+    RelativeLayout simple;
     ArrayList<String> lista = new ArrayList<String>();
 
     String tmp2 = " ";
@@ -45,12 +51,16 @@ public class quizowanie extends AppCompatActivity {
 
 
 
+    @SuppressLint("ResourceType")
     public void Play() throws IOException
     {
+
+
         final ArrayList<Integer> lista = new ArrayList<Integer>();
 
 
-        ImageButton butonik = (ImageButton)findViewById(R.id.imageButton);
+
+         simple = (RelativeLayout)findViewById(R.id.rel);
 
         final CheckBox jedynka=(CheckBox)findViewById(R.id.pierwszy);
         final CheckBox dwojka=(CheckBox)findViewById(R.id.drugi);
@@ -62,20 +72,35 @@ public class quizowanie extends AppCompatActivity {
         final CheckBox osmy = (CheckBox)findViewById(R.id.osmy);
         final CheckBox dziewiaty = (CheckBox)findViewById(R.id.dziewiaty);
         final TextView pt = (TextView)findViewById(R.id.pytanie);
-        final TextView wyniczek = (TextView)findViewById(R.id.wynik);
+
+
+        RelativeLayout.LayoutParams buttonParam = new RelativeLayout.LayoutParams(
+                200,
+                200);
+
+        final ImageButton myButton = new ImageButton(this);  // create a new Button
+        myButton.setId(1);
+        myButton.setImageResource(R.drawable.dalej); // set Text in the Button
+        myButton.setLayoutParams(buttonParam); // set defined layout params to Button
+
+
+        //simple.addView(myButton);
 
 
 
 
 
+
+        Charset ch = Charset.forName("windows-1250");
         String str = "";
         String odp = "";
+
         StringBuffer buf1 = new StringBuffer();
         StringBuffer buf = new StringBuffer();
-        InputStream is = this.getResources().openRawResource(R.raw.pytanka2);
+        InputStream is = this.getResources().openRawResource(R.raw.polskie);
         InputStream is2 = this.getResources().openRawResource(R.raw.moje);
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2));
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2,ch));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is,ch));
         if(is!=null)
         {
             while (( str = reader.readLine()) != null)
@@ -107,7 +132,7 @@ public class quizowanie extends AppCompatActivity {
         final String[] str1 = pytanko.split("#");
         final Random rand = new Random();
 
-        final int random = rand.nextInt(str1.length);
+        final int random = rand.nextInt(367);
         //Toast.makeText(getApplicationContext(),Integer.toString(random),Toast.LENGTH_LONG).show();
 
 
@@ -115,6 +140,10 @@ public class quizowanie extends AppCompatActivity {
             pt.setText(str2[0]);
             jedynka.setText(str2[1]);
             dwojka.setText(str2[2]);
+
+
+
+
 
 
 
@@ -127,6 +156,11 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setVisibility(View.INVISIBLE);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.drugi);
+
+
+
+
             }
             if (str2.length==4)
             {
@@ -138,6 +172,9 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setVisibility(View.INVISIBLE);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.trzeci);
+
+
             }
             if(str2.length==5)
             {
@@ -150,6 +187,9 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setVisibility(View.INVISIBLE);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.czwarty);
+
+
             }
             if (str2.length==6)
             {
@@ -163,6 +203,9 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setVisibility(View.INVISIBLE);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.piaty);
+
+
             }
             if(str2.length==7)
             {
@@ -177,6 +220,9 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setVisibility(View.INVISIBLE);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.szosty);
+
+
             }
             if(str2.length==8)
             {
@@ -192,6 +238,9 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setText(str2[7]);
                 osmy.setVisibility(View.INVISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.siodmy);
+
+
             }
             if(str2.length==9)
             {
@@ -208,6 +257,9 @@ public class quizowanie extends AppCompatActivity {
                 osmy.setText(str2[8]);
                 osmy.setVisibility(View.VISIBLE);
                 dziewiaty.setVisibility(View.INVISIBLE);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.osmy);
+
+
             }
             if(str2.length==10)
             {
@@ -225,12 +277,50 @@ public class quizowanie extends AppCompatActivity {
                 osmy.setVisibility(View.VISIBLE);
                 dziewiaty.setVisibility(View.VISIBLE);
                 dziewiaty.setText(str2[9]);
+                buttonParam.addRule(RelativeLayout.BELOW, R.id.dziewiaty);
             }
 
 
-            wyniczek.setText("Ilosc odpowiedzi dobrych : "+Integer.toString(dobre)+"\n"+"Ilosc udzielonych odpowiedzi : "+Integer.toString(ilosc));
 
-             butonik.setOnClickListener(new View.OnClickListener() {
+
+
+            buttonParam.addRule(RelativeLayout.CENTER_HORIZONTAL);
+             simple.addView(myButton);
+        myButton.setVisibility(View.VISIBLE);
+
+
+
+        RelativeLayout.LayoutParams txt1 = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT  );
+
+        final TextView txt = new TextView(this);
+        txt.setText("Ilosc odpowiedzi dobrych : "+Integer.toString(dobre)+"\n"+"Ilosc udzielonych odpowiedzi : "+Integer.toString(ilosc));
+
+       txt.setLayoutParams(txt1);
+        txt1.addRule(RelativeLayout.BELOW,1);
+
+        txt1.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        simple.addView(txt);
+        txt.setVisibility(View.VISIBLE);
+
+
+
+
+
+
+
+
+           // wyniczek.setText("Ilosc odpowiedzi dobrych : "+Integer.toString(dobre)+"\n"+"Ilosc udzielonych odpowiedzi : "+Integer.toString(ilosc));
+
+
+            if(ilosc==20)
+            {
+                Intent intent = new Intent(getApplicationContext(),result.class);
+                intent.putExtra("liczba",dobre);
+                startActivity(intent);
+            }
+             myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ilosc++;
@@ -279,7 +369,8 @@ public class quizowanie extends AppCompatActivity {
                     tmp2=tmp2+"i";
                     j++;
                 }
-
+            myButton.setVisibility(View.INVISIBLE);
+                txt.setVisibility(View.INVISIBLE);
             for(int i=0;i<odppytanie.length;i++) {
                 if (random == i) {
                     if (tmp2.contains(odppytanie[i]) && j==odppytanie[i].length()) {
@@ -290,7 +381,6 @@ public class quizowanie extends AppCompatActivity {
                 }
 
             }
-
             tmp2=" ";
             j=0;
                 jedynka.setChecked(false);
@@ -302,6 +392,7 @@ public class quizowanie extends AppCompatActivity {
                 siodmy.setChecked(false);
                 osmy.setChecked(false);
                 dziewiaty.setChecked(false);
+
                 try {
                     Play();
                 }catch (IOException e)
