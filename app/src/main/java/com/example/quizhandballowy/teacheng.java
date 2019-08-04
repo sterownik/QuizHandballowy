@@ -28,7 +28,7 @@ import java.util.Random;
 import static android.view.Window.FEATURE_NO_TITLE;
 import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
 
-public class teach extends AppCompatActivity {
+public class teacheng extends AppCompatActivity {
     RelativeLayout simple1;
     ArrayList<String> lista = new ArrayList<String>();
 
@@ -42,12 +42,13 @@ public class teach extends AppCompatActivity {
         getWindow().setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN);//USTWIAM FLAGI
         requestWindowFeature(FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teach);
+        setContentView(R.layout.activity_teacheng);
+
         try {
             Play();
         }catch (IOException e)
         {
-            Toast.makeText(getApplicationContext(),"By³y problemy z plikiem",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"ByÅ‚y problemy z plikiem",Toast.LENGTH_LONG).show();
         }
     }
 
@@ -79,7 +80,8 @@ public class teach extends AppCompatActivity {
 
 
 
-       simple1 = (RelativeLayout)findViewById(R.id.teach);
+
+        simple1 = (RelativeLayout)findViewById(R.id.teach);
 
         RelativeLayout.LayoutParams buttonParam = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -98,38 +100,38 @@ public class teach extends AppCompatActivity {
         //next.setImageResource(R.drawable.next); // set Text in the Button
         next.setTextColor(Color.BLACK);
 
-        next.setText("Nastepne pytanie");
+        next.setText("Next question");
         next.setId(11);
         next.setLayoutParams(buttonParam); // set defined layout params to Button
 
         final Button idz = new Button(this);
         idz.setTextColor(Color.BLACK);
 
-        idz.setText("Do pytania");
+        idz.setText("To the question...");
         idz.setId(8);
         idz.setLayoutParams(paramsidz);
 
         final EditText numer = new EditText(this);
         numer.setInputType(InputType.TYPE_CLASS_NUMBER);
         numer.setId(6);
-        numer.setHint("Pytanie");
+        numer.setHint("Question");
         numer.setHintTextColor(Color.GRAY);
 
-       this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         numer.setLayoutParams(editparams);
 
         final Button back = new Button(this);  // create a new Button
         back.setTextColor(Color.BLACK);
 
 
-       // back.setImageResource(R.drawable.back); // set Text in the Button
-        back.setText("Poprzednie pytanie");
+        // back.setImageResource(R.drawable.back); // set Text in the Button
+        back.setText("Previous question");
         back.setLayoutParams(buttonParam3); // set defined layout params to Button
 
 
 
         final Button myButton = new Button(this);  // create a new Button
-        myButton.setText("Sprawdz"); // set Text in the Button
+        myButton.setText("Check"); // set Text in the Button
         myButton.setId(3);
 
         myButton.setLayoutParams(buttonParam2); // set defined layout params to Button
@@ -138,15 +140,15 @@ public class teach extends AppCompatActivity {
 
 
 
-        Charset ch = Charset.forName("windows-1250");
+       // Charset ch = Charset.forName("windows-1250");
         String str = "";
         String odp = "";
         StringBuffer buf1 = new StringBuffer();
         StringBuffer buf = new StringBuffer();
-        InputStream is = this.getResources().openRawResource(R.raw.polskie);
+        InputStream is = this.getResources().openRawResource(R.raw.angquestions);
         InputStream is2 = this.getResources().openRawResource(R.raw.moje);
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2,ch));
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is,ch));
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(is2));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         if(is!=null)
         {
             while (( str = reader.readLine()) != null)
@@ -367,7 +369,6 @@ public class teach extends AppCompatActivity {
 
         paramsidz.addRule(RelativeLayout.BELOW,6);
         paramsidz.addRule(RelativeLayout.CENTER_HORIZONTAL);
-      //  paramsidz.addRule(RelativeLayout.BELOW,3);
 
         buttonParam2.addRule(RelativeLayout.CENTER_HORIZONTAL);
         buttonParam.addRule(RelativeLayout.RIGHT_OF,3);
@@ -389,9 +390,8 @@ public class teach extends AppCompatActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT  );
 
         final TextView txt = new TextView(this);
-        numerek.setText("Numer pytania to : "+ Integer.toString(liczba));
+        numerek.setText("The question number is : "+ Integer.toString(liczba));
         txt1.setMargins(20,60,0,0);
-
 
         txt.setLayoutParams(txt1);
         txt1.addRule(RelativeLayout.RIGHT_OF,6);
@@ -405,13 +405,13 @@ public class teach extends AppCompatActivity {
         txt.setVisibility(View.VISIBLE);
 
 
-      //  wyniczek.setText("Numer pytania to : "+ Integer.toString(liczba));
+        //  wyniczek.setText("Numer pytania to : "+ Integer.toString(liczba));
 
         idz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    if(!numer.getText().toString().isEmpty())
-                    {
+                if(!numer.getText().toString().isEmpty())
+                {
                     liczba = Integer.parseInt(numer.getText().toString());
                     if (liczba > 367) {
                         Toast.makeText(getApplicationContext(), "Nie ma takiego pytania", Toast.LENGTH_LONG).show();
@@ -440,16 +440,16 @@ public class teach extends AppCompatActivity {
                         try {
                             Play();
                         } catch (IOException e) {
-                            Toast.makeText(getApplicationContext(), "By³y problemy z plikiem", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "ByÅ‚y problemy z plikiem", Toast.LENGTH_LONG).show();
                         }
                     }
 
 
                 }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), "Podaj numer pytania!", Toast.LENGTH_LONG).show();
-                    }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Podaj numer pytania!", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -459,7 +459,7 @@ public class teach extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-         /*       ilosc++;
+                ilosc++;
                 if(jedynka.isChecked())
                 {
                     tmp2=tmp2+"a";
@@ -507,7 +507,7 @@ public class teach extends AppCompatActivity {
                 }
 
 
-               for(int i=0;i<odppytanie.length;i++) {
+                for(int i=0;i<odppytanie.length;i++) {
                     if (liczba == i) {
                         if (tmp2.contains(odppytanie[i]) && j==odppytanie[i].length()) {
                             Toast.makeText(getApplicationContext(), "Zdobywasz punkt", Toast.LENGTH_LONG).show();
@@ -516,8 +516,7 @@ public class teach extends AppCompatActivity {
 
                     }
 
-                }*/
-
+                }
                 char[] odpowiedz;
                 String que="";
 
@@ -526,11 +525,9 @@ public class teach extends AppCompatActivity {
                     odpowiedz=odppytanie[liczba].toCharArray();
                     que=que+odpowiedz[i]+ " ";
                 }
-
-
                 if(que.contains("a"))
                 {
-                        jedynka.setTextColor(Color.GREEN);
+                    jedynka.setTextColor(Color.GREEN);
                 }
                 if(que.contains("b"))
                 {
@@ -565,14 +562,11 @@ public class teach extends AppCompatActivity {
                     dziewiaty.setTextColor(Color.GREEN);
                 }
 
-
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                zmienkolor(checkBoxess);
                 if(liczba==0)
                 {
                     liczba=0;
@@ -597,11 +591,12 @@ public class teach extends AppCompatActivity {
                 back.setVisibility(View.INVISIBLE);
                 txt.setVisibility(View.INVISIBLE);
                 idz.setVisibility(View.INVISIBLE);
+                zmienkolor(checkBoxess);
                 try {
                     Play();
                 }catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(),"By³y problemy z plikiem",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"ByÅ‚y problemy z plikiem",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -611,7 +606,7 @@ public class teach extends AppCompatActivity {
 
 
 
-       next.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(liczba==367)
@@ -643,7 +638,7 @@ public class teach extends AppCompatActivity {
                     Play();
                 }catch (IOException e)
                 {
-                    Toast.makeText(getApplicationContext(),"By³y problemy z plikiem",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"ByÅ‚y problemy z plikiem",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -656,5 +651,4 @@ public class teach extends AppCompatActivity {
             checkBoxes[i].setTextColor(Color.BLACK);
         }
     }
-
 }

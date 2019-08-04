@@ -9,8 +9,15 @@
         android:roundIcon="@mipmap/ikona"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".result"></activity>
-        <activity android:name=".teach" />
+        <activity android:name=".teacheng"
+            ></activity>
+        <activity android:name=".quizowanieeng"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".English_main" />
+        <activity android:name=".result"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".teach"
+            />
         <activity
             android:name=".quizowanie"
             android:label="@string/title_activity_quizowanie"

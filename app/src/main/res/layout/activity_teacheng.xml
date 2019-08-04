@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teach">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/teach"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cononono"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/numer"/>
+
+
+            <TextView
+                android:id="@+id/pytanie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numer"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:id="@+id/pierwszy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pytanie"
+                android:checked="false"
+                android:padding="16dp"
+                android:text="CheckBox"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/drugi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/pierwszy"
+
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/trzeci"
+                android:layout_width="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drugi"
+
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/czwarty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/trzeci"
+
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/piaty"
+                android:layout_below="@id/czwarty"
+                android:layout_width="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/szosty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/piaty"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/siodmy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/szosty"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/osmy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/siodmy"
+                android:text="CheckBox" />
+            <CheckBox
+                android:id="@+id/dziewiaty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="15dp"
+                android:layout_below="@id/osmy"
+                android:text="CheckBox" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

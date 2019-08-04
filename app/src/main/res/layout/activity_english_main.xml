@@ -7,28 +7,27 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/starteng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="@string/start" />
+        android:text="@string/starteng" />
     <Button
-        android:id="@+id/teach"
-        android:layout_below="@id/start"
+        android:id="@+id/teacheng"
+        android:layout_below="@id/starteng"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/teach" />
+        android:text="@string/teacheng" />
 
     <Button
-        android:id="@+id/end"
+        android:id="@+id/endeng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/teach"
-
+        android:layout_below="@id/teacheng"
         android:layout_centerHorizontal="true"
-        android:text="@string/end" />
+        android:text="@string/endend" />
 
 
 </RelativeLayout>

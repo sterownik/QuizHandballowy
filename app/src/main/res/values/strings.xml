@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Quiz Handballowy</string>
     <string name="start">Zacznij Quiz</string>
+    <string name="starteng">Begin Quiz</string>
     <string name="end">Wyjdź z programu</string>
+    <string name="endend">Quit the program</string>
     <string name="teach">Zacznij nauke</string>
+    <string name="teacheng">Start learning</string>
     <string name="check">Sprawdź</string>
+    <string name="polski">PL</string>
+    <string name="english">ENG</string>
     <string name="title_activity_quizowanie">quizowanie</string>
 </resources>

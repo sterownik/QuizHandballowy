@@ -17,7 +17,7 @@ public class result extends AppCompatActivity {
 
         ImageView img = (ImageView)findViewById(R.id.zdjecie);
         TextView txt = (TextView)findViewById(R.id.wynik);
-        if(liczba>15)
+        if(liczba>=30)
         {
                 txt.setText("Uzyskałeś sume punktów: \n" + Integer.toString(liczba)+ "\n" +" Co daje ocene pozytywną");
                 img.setImageResource(R.drawable.plus);

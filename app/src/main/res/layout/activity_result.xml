@@ -11,7 +11,6 @@
         android:layout_width="300dp"
         android:layout_centerHorizontal="true"
         android:layout_height="300dp"
-
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
@@ -20,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/zdjecie"
         android:gravity="center"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:layout_centerHorizontal="true"
         android:text="TextView" />
 </RelativeLayout>

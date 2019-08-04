@@ -18,8 +18,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <ProgressBar
+                android:id="@+id/czas"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:outlineAmbientShadowColor="@android:color/holo_red_dark"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/pytanie"
+        android:layout_below="@id/czas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -30,17 +39,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/pytanie"
+        android:padding="16dp"
         android:textSize="15dp"
-        android:layout_marginTop="0dp"
-
         android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/drugi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:textSize="15dp"
-        android:layout_marginTop="0dp"
         android:layout_below="@id/pierwszy"
 
         android:text="CheckBox" />
@@ -48,8 +56,8 @@
     <CheckBox
         android:id="@+id/trzeci"
         android:layout_width="wrap_content"
-        android:layout_marginTop="0dp"
         android:textSize="15dp"
+        android:padding="16dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/drugi"
 
@@ -59,7 +67,7 @@
         android:id="@+id/czwarty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:padding="16dp"
         android:textSize="15dp"
         android:layout_below="@id/trzeci"
 
@@ -69,7 +77,7 @@
         android:id="@+id/piaty"
         android:layout_below="@id/czwarty"
         android:layout_width="wrap_content"
-        android:layout_marginTop="0dp"
+        android:padding="16dp"
         android:textSize="15dp"
         android:layout_height="wrap_content"
 
@@ -78,8 +86,8 @@
     <CheckBox
         android:id="@+id/szosty"
         android:layout_width="wrap_content"
+        android:padding="16dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:textSize="15dp"
         android:layout_below="@id/piaty"
         android:text="CheckBox" />
@@ -88,7 +96,7 @@
         android:id="@+id/siodmy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:padding="16dp"
         android:textSize="15dp"
         android:layout_below="@id/szosty"
         android:text="CheckBox" />
@@ -97,7 +105,7 @@
         android:id="@+id/osmy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:padding="16dp"
         android:textSize="15dp"
         android:layout_below="@id/siodmy"
         android:text="CheckBox" />
@@ -105,7 +113,8 @@
         android:id="@+id/dziewiaty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:padding="16dp"
+
         android:textSize="15dp"
         android:layout_below="@id/osmy"
         android:text="CheckBox" />
